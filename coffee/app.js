@@ -1,10 +1,10 @@
 const menuItems = [
-  { id: 1, name: 'Espresso', desc: 'Rich and bold single shot', price: 99 },
-  { id: 2, name: 'Cappuccino', desc: 'Espresso with steamed milk foam', price: 149 },
-  { id: 3, name: 'Latte', desc: 'Creamy latte with silky milk', price: 159 },
-  { id: 4, name: 'Mocha', desc: 'Chocolatey mocha for sweet cravings', price: 169 },
-  { id: 5, name: 'Iced Coffee', desc: 'Chilled coffee over ice', price: 129 },
-  { id: 6, name: 'Almond Croissant', desc: 'Buttery pastry with almond filling', price: 119 }
+  { id: 1, name: 'Espresso', desc: 'Rich and bold single shot', price: 99, img: 'photo-1509042239860-f550ce710b93.avif' },
+  { id: 2, name: 'Cappuccino', desc: 'Espresso with steamed milk foam', price: 149, img: 'premium_photo-1674327105074-46dd8319164b.avif' },
+  { id: 3, name: 'Latte', desc: 'Creamy latte with silky milk', price: 159, img: 'images.jpeg' },
+  { id: 4, name: 'Mocha', desc: 'Chocolatey mocha for sweet cravings', price: 169, img: 'Unknown.jpeg' },
+  { id: 5, name: 'Iced Coffee', desc: 'Chilled coffee over ice', price: 129, img: 'photo-1509042239860-f550ce710b93.avif' },
+  { id: 6, name: 'Almond Croissant', desc: 'Buttery pastry with almond filling', price: 119, img: 'premium_photo-1674327105074-46dd8319164b.avif' }
 ];
 
 const itemsContainer = document.getElementById('items');
@@ -24,6 +24,7 @@ function renderMenu(){
     const card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
+      <img src="${it.img}" alt="${it.name}" class="card-img">
       <h3>${it.name}</h3>
       <p>${it.desc}</p>
       <div class="meta">
